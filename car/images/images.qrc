@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>background.jpg</file>
+        <file>images.qrc</file>
+        <file>next2.png</file>
+        <file>pause2.png</file>
+        <file>play2.png</file>
+        <file>pre2.png</file>
+        <file>systemTrayIcon.png</file>
+        <file>OIP-C.jpg</file>
+        <file>b.jpg</file>
+        <file>b2.jpg</file>
+        <file>b3.jpg</file>
+        <file>main.png</file>
+        <file>quit.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,77 @@
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+                body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+                #allmap{height:500px;width:100%;}
+                #r-result{width:100%; font-size:14px;}
+        </style>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UEyqGnA3GNisb6GpIWpWjUuO98QSTZoH"></script>
+        <title>城市名定位</title>
+</head>
+<body>
+        <div id="allmap"></div>
+        <div id="r-result">
+                经度: <input id="longitude" type="text" style="width:100px; margin-right:10px;" />
+                纬度: <input id="latitude" type="text" style="width:100px; margin-right:10px;" />
+                <input type="button" value="查询" onclick="theLocation()" />
+        </div>
+</body>
+</html>
+<script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map("allmap",{
+        minZoom : 1,
+        maxZoom : 20
+        });
+        //初始化地图，设置坐标点在哪
+        map.centerAndZoom(new BMap.Point(116.404323,39.905201),18);
+        map.enableScrollWheelZoom(true);
+
+        //设置标注图片
+        var icon = new BMap.Icon("car.png",new BMap.Size(75,40),{
+                        anchor:new BMap.Size(35,0)
+         });
+
+        // 用经纬度设置地图中心点
+        function theLocation(){
+               if(document.getElementById("longitude").value != "" && document.getElementById("latitude").value != ""){
+                        map.clearOverlays();
+                        var new_point = new BMap.Point(document.getElementById("longitude").value,document.getElementById("latitude").value);
+                        var marker = new BMap.Marker((new_point),{
+            icon:icon
+    });
+                        map.addOverlay(marker);              // 将标注添加到地图中
+                        map.panTo(new_point);
+                }
+       }
+       
+       translateCallback = function addpoint1(data){
+        //if(data.status === 0) {
+        //var marker1 = new BMap.Marker(data.points[0]);
+        //map.addOverlay(marker1);
+        //}
+    }
+    
+        function send(){
+            map.clearOverlays();
+            }
+       
+        function addpoint (x,y){
+                
+                //map.clearOverlays(); //更新前先清除之前的标注
+                
+                var convertor = new BMap.Convertor();
+                var pointArr = [];
+                var ggPoint = new BMap.Point(x,y);
+                pointArr.push(ggPoint);
+                //map.clearOverlays();
+                //var ggPoint = new BMap.Point(x,y);
+                var marker = new BMap.Marker((ggPoint),{
+            icon:icon
+    });
+                map.addOverlay(marker);
+                //convertor.translate(pointArr,1,5,translateCallback)
+    }
+</script>

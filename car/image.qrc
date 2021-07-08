@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>images/b.jpg</file>
+        <file>images/b2.jpg</file>
+        <file>images/b3.jpg</file>
+        <file>images/background.jpg</file>
+        <file>images/main.png</file>
+        <file>images/next2.png</file>
+        <file>images/OIP-C.jpg</file>
+        <file>images/pause2.png</file>
+        <file>images/play2.png</file>
+        <file>images/pre2.png</file>
+        <file>images/quit.png</file>
+        <file>images/systemTrayIcon.png</file>
+        <file>images/music-voice.png</file>
+        <file>images/volume.png</file>
+        <file>images/next.png</file>
+        <file>images/play.png</file>
+        <file>images/prev.png</file>
+        <file>images/stop.png</file>
+        <file>images/addfile.png</file>
+        <file>images/6.png</file>
+        <file>images/7.png</file>
+        <file>images/12.jpg</file>
+        <file>images/22.jpg</file>
+        <file>images/OIP-C (1).jpg</file>
+        <file>images/20161004142812_80269.jpg</file>
+        <file>images/R-C (1).jpg</file>
+        <file>images/R-C (2).jpg</file>
+        <file>images/cloud.png</file>
+        <file>images/map.png</file>
+        <file>images/weather.png</file>
+        <file>images/sandfly.png</file>
+        <file>images/sunny.png</file>
+        <file>images/wea1.png</file>
+        <file>images/wea2.png</file>
+        <file>images/wea3.png</file>
+        <file>images/wind.png</file>
+        <file>images/xiaoyu.png</file>
+        <file>images/yintian.png</file>
+        <file>images/cloudy.png</file>
+    </qresource>
+</RCC>
